@@ -1,6 +1,6 @@
 # https://spring.io/guides/gs/spring-boot-docker/
 
-FROM openjdk:17-jdk-alpine
+FROM openjdk:18-jdk-oraclelinux8
 
 WORKDIR /usr/src/app
 
