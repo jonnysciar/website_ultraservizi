@@ -1,3 +1,5 @@
+# https://spring.io/guides/gs/spring-boot-docker/
+
 FROM openjdk:17-jdk-alpine
 
 WORKDIR /usr/src/app
@@ -12,4 +14,4 @@ USER 1001
 
 RUN ./mvnw package
 
-ENTRYPOINT ["java","-jar","/usr/src/app/target/website_ultraservizi-1.0.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/usr/src/app/target/demo-0.0.1-SNAPSHOT.jar"]
