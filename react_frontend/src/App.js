@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+import logo from './elisabetta.jpg';
 import './App.css';
 
 class App extends Component {
@@ -19,7 +19,7 @@ class App extends Component {
             utenti.forEach((u) => {
                 stringa = stringa + "\n" + u.nome;
             })
-            this.setState({message: stringa});
+            this.setState({message: "Elisabetta"});
         });
   };
 
