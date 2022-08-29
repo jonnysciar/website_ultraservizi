@@ -1,4 +1,4 @@
-package it.jonnysciar.web_ultraservizi.entities;
+package it.jonnysciar.website_ultraservizi.entities;
 
 
 import javax.persistence.*;

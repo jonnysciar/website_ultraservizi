@@ -1,8 +1,8 @@
-package it.jonnysciar.web_ultraservizi.controllers;
+package it.jonnysciar.website_ultraservizi.controllers;
 
 import com.google.gson.Gson;
-import it.jonnysciar.web_ultraservizi.entities.Persona;
-import it.jonnysciar.web_ultraservizi.repositories.PersonaRepository;
+import it.jonnysciar.website_ultraservizi.entities.Persona;
+import it.jonnysciar.website_ultraservizi.repositories.PersonaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
