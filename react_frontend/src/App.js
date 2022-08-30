@@ -1,38 +1,14 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import {Button} from "@mui/material";
+import {Component} from "react";
 
-class App extends Component {
-
-  state = {};
-
-  componentDidMount() {
-    this.dadJokes()
-  }
-
-  dadJokes = () => {
-    fetch('/api/allPersone')
-        .then((response) => response.text())
-        .then((message) => {
-            let utenti = JSON.parse(message);
-            let stringa = "";
-            utenti.forEach((u) => {
-                stringa = stringa + "\n" + u.nome;
-            })
-            this.setState({message: stringa});
-        });
-  };
-
-  render() {
-    return (
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo"/>
-            <h3 className="App-title">{this.state.message}</h3>
-          </header>
-        </div>
-    );
-  }
+class Pulsante extends Component {
+    render() {
+        return (
+            <div>
+                <Button variant="contained">Hello World</Button>
+            </div>
+        );
+    }
 }
-
-export default App;
+export default Pulsante;
