@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Pulsante from './App';
 import reportWebVitals from './reportWebVitals';
+import Navbar from "./Navbar";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Pulsante />
+      <Navbar />
+      <Pulsante />
   </React.StrictMode>
 );
 
