@@ -53,12 +53,12 @@ class Navbar extends React.Component {
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 flex: '1 1',
-                                minWidth: 333
+                                minWidth: 333,
                             }}>
                                 {pages.map((page) => (
                                     <Button
                                         key={page}
-                                        sx={{my: 2, color: 'white', display: 'block'}}
+                                        sx={{my: 2, color: 'white'}}
                                         onClick={() => this.menuItemOnClick(page)}
                                     >
                                         {page}
