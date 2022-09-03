@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Pulsante from './App';
 import reportWebVitals from './reportWebVitals';
-import Navbar from "./Navbar";
+import {Page} from "./page";
+import theme from "./theme";
+import {ThemeProvider} from "@mui/material";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <Navbar />
-      <Pulsante />
+      <ThemeProvider theme={theme}>
+          <Page />
+      </ThemeProvider>
   </React.StrictMode>
 );
 
