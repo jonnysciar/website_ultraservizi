@@ -1,8 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import logo from "./logo.png"
-
 
 function Logo(props) {
     let string = '/';
@@ -13,7 +11,7 @@ function Logo(props) {
         <Box sx={{display: 'flex'}}>
             <Box sx={{alignItems: 'center', mr: {md: 2}}}>
                 <a href={string}>
-                    <img className="logo" src='/logo50.png' alt='Logo' />
+                    <img className="logo" src='/logo192.png' alt='Logo' width='50px'/>
                 </a>
             </Box>
             <Typography
