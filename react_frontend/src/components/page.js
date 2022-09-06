@@ -1,13 +1,13 @@
 import {Component} from "react";
 import Navbar from "./navbar";
-import PageContent from "./pageContent";
+import {PageContent} from "./pageContent";
 import Container from "@mui/material/Container";
 
 class Page extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {page: 'Chi siamo'};
+        this.state = {page: 'I nostri servizi'};
     }
 
     onChangePage(page) {
@@ -16,7 +16,7 @@ class Page extends Component {
 
     render() {
         return (
-            <Container disableGutters maxWidth='auto'>
+            <Container disableGutters maxWidth>
                 <Navbar
                     onChangePage={(page) => this.onChangePage(page)}
                     sx={{order: 1}}

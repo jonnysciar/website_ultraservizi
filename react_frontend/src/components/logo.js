@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import ultraserviziFont from "../fonts/ultraservizi_font.otf"
 
 function Logo(props) {
     let string = '/';
@@ -11,7 +12,7 @@ function Logo(props) {
         <Box sx={{display: 'flex'}}>
             <Box sx={{alignItems: 'center', mr: {md: 2}}}>
                 <a href={string}>
-                    <img className="logo" src='/logo192.png' alt='Logo' width='50px'/>
+                    <img className="logo" src='/images/logo_bg.png' alt='Logo' width={'50px'}/>
                 </a>
             </Box>
             <Typography
@@ -29,6 +30,7 @@ function Logo(props) {
                     textDecoration: 'none',
                     alignItems: 'center'
                 }}
+                fontFamily={ultraserviziFont}
             >
                 ULTRASERVIZI
             </Typography>
