@@ -19,7 +19,6 @@ class Page extends Component {
             <Container disableGutters maxWidth>
                 <Navbar
                     onChangePage={(page) => this.onChangePage(page)}
-                    sx={{order: 1}}
                 />
                 <PageContent page={this.state.page}/>
             </Container>

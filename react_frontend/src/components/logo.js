@@ -12,7 +12,7 @@ function Logo(props) {
         <Box sx={{display: 'flex'}}>
             <Box sx={{alignItems: 'center', mr: {md: 2}}}>
                 <a href={string}>
-                    <img className="logo" src='/images/logo_bg.png' alt='Logo' width={'50px'}/>
+                    <img className="logo" src='/images/logo_bg.png' alt='Logo' width={'60px'}/>
                 </a>
             </Box>
             <Typography
