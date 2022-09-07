@@ -76,7 +76,11 @@ class PageServizi extends Component {
         return (
             <Container>
                 {/* Hero unit */}
-                <Container disableGutters maxWidth="sm" sx={{pt: 6, pb: 6}}>
+                <Container
+                    disableGutters
+                    maxWidth="sm"
+                    sx={{pt: 4, pb: 6}}
+                >
                     <Typography
                         component="h1"
                         variant="h2"
