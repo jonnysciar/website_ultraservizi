@@ -61,7 +61,7 @@ class Navbar extends React.Component {
                             <Box sx={{
                                 justifyContent: 'flex-start',
                                 flex: '1 1',
-                                display: {xs: 'none', md: 'flex'}
+                                display: {xs: 'none', md: 'flex'},
                             }}>
                                 <Logo />
                             </Box>

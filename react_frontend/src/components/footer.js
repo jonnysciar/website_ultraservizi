@@ -14,6 +14,7 @@ function Footer(props) {
         <Container
             sx={{
                 mt: 8,
+                mb: 2,
                 pt: 2,
                 bottom: 0,
                 bgcolor: 'primary.main',
