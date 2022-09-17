@@ -1,6 +1,6 @@
 import {Component} from "react";
 import Navbar from "./navbar";
-import {PageContent} from "./pageContent";
+import PageContent from "./pageContent";
 import Container from "@mui/material/Container";
 import Footer from "./footer";
 

@@ -35,7 +35,7 @@ class Navbar extends React.Component {
     }
 
     render() {
-        let props2 = JSON.parse(JSON.stringify(this.props))
+        const props2 = JSON.parse(JSON.stringify(this.props))
         return (
                 <AppBar
 

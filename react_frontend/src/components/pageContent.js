@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Component} from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import Grid from '@mui/material/Grid';
@@ -8,7 +9,6 @@ import {CardActionArea, CardContent, CardMedia, styled} from "@mui/material";
 import theme from "./theme";
 import img from "../images/placeholder.png";
 import {ServizioDialog} from "./dialogs";
-import {Component} from "react";
 
 const services = [
     {
@@ -80,7 +80,6 @@ class PageServizi extends Component {
                 {/* Hero unit */}
                 <Container
                     disableGutters
-                    maxWidth="sm"
                     sx={{
                         pb: 6,
                     }}
@@ -114,7 +113,7 @@ class PageServizi extends Component {
                                 item
                                 key={service.title}
                                 sx={{
-                                    width: 350,
+                                    maxWidth: 350
                                 }}
                             >
                                 <Card>
@@ -176,18 +175,8 @@ class PageContattaci extends Component {
     }
 }
 
-function Copyright(props) {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center" {...props}>
-            {'Copyright © '}Jonathan Sciarrabba
-            {' ' + new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
-
 function PageContent(props) {
-    let props2 = JSON.parse(JSON.stringify(props))
+    const props2 = JSON.parse(JSON.stringify(props))
     delete props2.page
     switch (props.page) {
         case 'Chi siamo':
@@ -207,4 +196,4 @@ const StyledCardActionArea = styled(CardActionArea)`
   }
 `;
 
-export {PageContent, Copyright};
+export default PageContent;
