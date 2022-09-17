@@ -74,12 +74,16 @@ class PageServizi extends Component {
 
     render() {
         return (
-            <Container>
+            <Container
+                {...this.props}
+            >
                 {/* Hero unit */}
                 <Container
                     disableGutters
                     maxWidth="sm"
-                    sx={{pt: 4, pb: 6}}
+                    sx={{
+                        pb: 6,
+                    }}
                 >
                     <Typography
                         component="h1"
@@ -145,9 +149,13 @@ class PageServizi extends Component {
 }
 
 class PageChiSiamo extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
-            <Container>
+            <Container {...this.props}>
                 Chi Siamo
             </Container>
         );
@@ -155,9 +163,13 @@ class PageChiSiamo extends Component {
 }
 
 class PageContattaci extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
-            <Container>
+            <Container {...this.props}>
                 Contattaci
             </Container>
         );
@@ -175,7 +187,18 @@ function Copyright(props) {
 }
 
 function PageContent(props) {
-    return pages[props.page];
+    let props2 = JSON.parse(JSON.stringify(props))
+    delete props2.page
+    switch (props.page) {
+        case 'Chi siamo':
+            return <PageChiSiamo {...props2}/>
+        case 'I nostri servizi':
+            return <PageServizi {...props2}/>
+        case 'Contattaci':
+            return <PageContattaci {...props2}/>
+        default:
+            return <p>Errore!</p>
+    }
 }
 
 const StyledCardActionArea = styled(CardActionArea)`
@@ -183,11 +206,5 @@ const StyledCardActionArea = styled(CardActionArea)`
     background-color: ${theme.palette.secondary.dark};
   }
 `;
-
-const pages = {
-    'Chi siamo': <PageChiSiamo />,
-    'I nostri servizi': <PageServizi/>,
-    'Contattaci': <PageContattaci />,
-};
 
 export {PageContent, Copyright};

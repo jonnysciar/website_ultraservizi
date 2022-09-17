@@ -35,14 +35,18 @@ class Navbar extends React.Component {
     }
 
     render() {
+        let props2 = JSON.parse(JSON.stringify(this.props))
         return (
                 <AppBar
+
                     sx={{
                         position: 'fixed',
                         bgcolor: 'white',
                         borderColor: 'transparent',
-                        boxShadow: 0
-                }}>
+                        boxShadow: 0,
+                    }}
+                    {...props2}
+                >
                     <Toolbar
                         sx={{
                             bgcolor: 'primary.main',

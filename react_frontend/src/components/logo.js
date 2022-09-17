@@ -9,8 +9,19 @@ function Logo(props) {
         string = props.link;
     }
     return (
-        <Box sx={{display: 'flex'}} {...props}>
-            <Box sx={{alignItems: 'center', mr: {md: 2}}}>
+        <Box
+            sx={{
+                display: 'flex'
+            }}
+
+            {...props}
+        >
+            <Box
+                sx={{
+                    alignItems: 'center',
+                    mr: {md: 2}
+                }}
+            >
                 <a href={string}>
                     <img className="logo" src='/images/logo_bg.png' alt='Logo' width={'60px'}/>
                 </a>

@@ -1,27 +1,42 @@
 import React from 'react';
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
+import Grid from "@mui/material/Grid";
 
 function Footer(props) {
     return (
-        <Container
-            maxWidth
+        <Grid
+            container
             sx={{
+                mt: 8,
                 bottom: 0,
-                mt: 2,
-                justifyContent: 'flex-end',
-                flexGrow: 1,
-                flexShrink: 1
-        }}
+                border: 'solid',
+                borderColor: 'yellow'
+            }}
+            {...props}
         >
-            <Typography
-                variant='h6'
-                textAlign='center'
+            <Grid
+                item
             >
-                Footer test @ 2022
-            </Typography>
-        </Container>
+                <Typography
+                    variant='h6'
+                    textAlign='center'
+                >
+                    Footer test @ 2022
+                </Typography>
+            </Grid>
+            <Grid
+                item
+            >
+                <WhatsAppIcon onClick={() => {console.log('Whatsapp')}}/>
+            </Grid>
+            <Grid
+                item
+            >
+                <PhoneEnabledIcon />
+            </Grid>
+        </Grid>
     );
 }
 
