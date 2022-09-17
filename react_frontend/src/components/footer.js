@@ -24,19 +24,6 @@ function Footer(props) {
             <Grid
                 container
             >
-                <Grid
-                    item
-                    container
-                    xs={12}
-                    sx={{
-                        justifyContent: 'center',
-                        alignContent: 'center'
-                    }}
-                >
-                    <a href={'/'}>
-                        <img className="logo" src='/images/logo_bg.png' alt='Logo' width={'60px'}/>
-                    </a>
-                </Grid>
 
                 <Grid
                     item
