@@ -19,9 +19,10 @@ class Page extends Component {
         return (
             <Container
                 disableGutters
+                maxWidth={false}
                 sx={{
                     display: 'flex',
-                    flexDirection: 'column',
+                    flexDirection: 'column'
                 }}
             >
                 <Navbar

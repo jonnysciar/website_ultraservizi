@@ -38,7 +38,6 @@ class Navbar extends React.Component {
         const props2 = JSON.parse(JSON.stringify(this.props))
         return (
                 <AppBar
-
                     sx={{
                         position: 'fixed',
                         bgcolor: 'white',
