@@ -17,14 +17,20 @@ class Page extends Component {
 
     render() {
         return (
-            <Container disableGutters sx={{display: 'flex', flexDirection: 'column'}}>
+            <Container
+                disableGutters
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                }}
+            >
                 <Navbar
                     onChangePage={(page) => this.onChangePage(page)}
                 />
                 <PageContent
                     page={this.state.page}
                     sx={{
-                        marginTop: 4,
+                        marginTop: 6,
                     }}
                 />
                 <Footer />
