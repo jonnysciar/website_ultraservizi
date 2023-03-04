@@ -1,45 +1,55 @@
-import {Component} from "react";
-import Navbar from "./navbar";
-import PageContent from "./pageContent";
+import Navbar from "./structures/navbar";
+import PageContent from "./structures/pageContent";
 import Container from "@mui/material/Container";
-import Footer from "./footer";
+import Footer from "./structures/footer";
 
-class Page extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {page: 'I nostri servizi'};
-    }
-
-    onChangePage(page) {
-        this.setState({page: page});
-    }
-
-    render() {
-        return (
-            <Container
-                disableGutters
-                maxWidth={false}
+function Page(props) {
+    return (
+        <Container
+            disableGutters
+            maxWidth={false}
+            sx={{
+                display: 'flex',
+                flexDirection: 'column'
+            }}
+            {...props}
+        >
+            <Navbar
+                pages={pages}
+                id='navbar'
+            />
+            <PageContent
                 sx={{
                     display: 'flex',
-                    flexDirection: 'column'
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    alignContent: 'center',
+                    mt: 4,
                 }}
-            >
-                <Navbar
-                    onChangePage={(page) => this.onChangePage(page)}
-                />
-                <PageContent
-                    page={this.state.page}
-                    sx={{
-                        marginTop: 6,
-                    }}
-                />
-                <Footer />
-            </Container>
-        );
-    }
+            />
+            <Footer/>
+        </Container>
+    );
 }
 
-const pages = ['Chi siamo', 'I nostri servizi', 'Contattaci'];
+const pages = [
+    {
+        name: 'Home',
+        section: 'home',
+    },
+    {
+        name: 'Chi siamo',
+        section: 'chi',
+    },
+    {
+        name: 'I nostri servizi',
+        section: 'servizi',
+    },
+    {
+        name: 'Contatti',
+        section: 'contatti',
+    }
+];
 
 export {Page, pages};

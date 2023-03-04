@@ -9,6 +9,15 @@ const theme = createTheme({
             main: '#E61E25',
         }
     },
+    typography: {
+        button: {
+            textTransform: 'none'
+        },
+        fontFamily: [
+            'Montserrat',
+            'sans-serif',
+        ].join(','),
+    }
 });
 
 export default theme;
