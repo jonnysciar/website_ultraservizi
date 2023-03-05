@@ -17,21 +17,14 @@ function Logo(props) {
         <Box
             sx={{
                 display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                pt: 0.5,
             }}
-
-            {...props}
         >
-            <Box
-                sx={{
-                    pt: 1,
-                    alignItems: 'center',
-                    mr: {md: 2}
-                }}
-            >
-                <a href={string}>
-                    <img className="logo" src='/images/logo/logo.png' alt='Logo' width={'60px'}/>
-                </a>
-            </Box>
+            <a href={string}>
+                <img className="logo" src='/images/logo/logo_navbar.png' alt='Logo' width={'70px'}/>
+            </a>
         </Box>
     );
 }
@@ -58,9 +51,9 @@ class Navbar extends React.Component {
     }
 
     menuItemOnClick(page) {
-        const navbar = document.getElementById('navbar');
+        const offset = document.getElementById('navbar').offsetHeight + 10;
         const element = document.getElementById(page);
-        const y = element.getBoundingClientRect().top + window.pageYOffset - (navbar.offsetHeight + 10);
+        const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({top: y, behavior: 'smooth'});
     }
 
@@ -83,6 +76,7 @@ class Navbar extends React.Component {
                             borderRadius: 10,
                             boxShadow: 5,
                     }}>
+
                         <Box sx={{
                             display: 'flex',
                             flexGrow: 1,
@@ -91,14 +85,17 @@ class Navbar extends React.Component {
                             alignContent: 'space-around',
                         }}>
                             {/*Desktop*/}
+
                             <Box sx={{
                                 display: {xs: 'none', md: 'flex'},
-                                flex: '1 1'
+                                flex: '1 1',
                             }}>
                             </Box>
 
                             <Box sx={{
                                 justifyContent: 'flex-start',
+                                alignItems: 'center',
+                                alignContent: 'space-around',
                                 display: {xs: 'none', md: 'flex'},
                                 flex: '2 1',
                             }}>
@@ -106,17 +103,14 @@ class Navbar extends React.Component {
                             </Box>
 
                             <Box sx={{
-                                flex: '1 1',
-                            }}>
-                            </Box>
-
-                            <Box sx={{
                                 display: {xs: 'none', md: 'flex'},
                                 alignItems: 'center',
-                                justifyContent: 'flex-end',
+                                justifyContent: 'space-between',
                                 alignContent: 'center',
-                                flex: '2 1',
-                                minWidth: 600,
+                                flex: '3 1',
+                                minWidth: 500,
+                                pl: 2,
+                                pr: 2,
                             }}>
                                 {pages.map((page) => (
                                     <Button
@@ -125,7 +119,7 @@ class Navbar extends React.Component {
                                         onClick={() => this.menuItemOnClick(page.section)}
                                     >
                                         <Typography
-                                            variant="h6"
+                                            variant="h5"
                                             align="center"
                                             color="white"
                                             component="p"
@@ -140,8 +134,7 @@ class Navbar extends React.Component {
                             </Box>
 
                             <Box sx={{
-                                display: {xs: 'none', md: 'flex'},
-                                flex: '1 1'
+                                flex: '1 1',
                             }}>
                             </Box>
 
