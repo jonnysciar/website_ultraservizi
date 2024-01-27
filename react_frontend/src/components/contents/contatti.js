@@ -22,6 +22,7 @@ function Contatti(props) {
                 mb: 2,
                 pt: 4,
                 pb: 4,
+                maxWidth: {xs: "80%", lg: "md"},
             }}
             {...props}
         >

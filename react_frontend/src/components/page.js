@@ -10,7 +10,7 @@ function Page(props) {
             maxWidth={false}
             sx={{
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
             }}
             {...props}
         >
@@ -19,13 +19,14 @@ function Page(props) {
                 id='navbar'
             />
             <PageContent
+                disableGutters
+                maxWidth={false}
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'center',
+                    justifyContent: 'flex-start',
                     alignItems: 'center',
                     alignContent: 'center',
-                    mt: 4,
                 }}
             />
             <Footer/>

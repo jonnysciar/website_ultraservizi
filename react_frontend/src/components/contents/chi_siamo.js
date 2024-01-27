@@ -19,10 +19,10 @@ function ChiSiamo(props) {
             sx={{
                 border: 3,
                 borderColor: 'secondary.main',
-                maxWidth: {xs: '100%', md:'80%'},
                 justifyContent: 'center',
                 mt: 2,
                 mb: 2,
+                maxWidth: {xs: "80%", lg: "md"},
             }}
             {...props}
         >

@@ -53,7 +53,7 @@ class Navbar extends React.Component {
     menuItemOnClick(page) {
         const offset = document.getElementById('navbar').offsetHeight + 10;
         const element = document.getElementById(page);
-        const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
+        const y = element.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({top: y, behavior: 'smooth'});
     }
 
@@ -62,7 +62,7 @@ class Navbar extends React.Component {
                 <AppBar
                     sx={{
                         position: 'fixed',
-                        bgcolor: 'white',
+                        bgcolor: 'transparent',
                         borderColor: 'transparent',
                         boxShadow: 0,
                     }}
@@ -87,7 +87,7 @@ class Navbar extends React.Component {
                             {/*Desktop*/}
 
                             <Box sx={{
-                                display: {xs: 'none', md: 'flex'},
+                                display: {xs: 'none', lg: 'flex'},
                                 flex: '1 1',
                             }}>
                             </Box>
@@ -96,19 +96,19 @@ class Navbar extends React.Component {
                                 justifyContent: 'flex-start',
                                 alignItems: 'center',
                                 alignContent: 'space-around',
-                                display: {xs: 'none', md: 'flex'},
+                                display: {xs: 'none', lg: 'flex'},
                                 flex: '2 1',
                             }}>
                                 <Logo />
                             </Box>
 
                             <Box sx={{
-                                display: {xs: 'none', md: 'flex'},
+                                display: {xs: 'none', lg: 'flex'},
                                 alignItems: 'center',
                                 justifyContent: 'space-between',
                                 alignContent: 'center',
                                 flex: '3 1',
-                                minWidth: 500,
+                                minWidth: 600,
                                 pl: 2,
                                 pr: 2,
                             }}>
@@ -140,18 +140,18 @@ class Navbar extends React.Component {
 
                             {/*Mobile*/}
                             <Box sx={{
-                                display: {xs: 'flex', md: 'none'},
+                                display: {xs: 'flex', lg: 'none'},
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 flex: '1 1',
                             }}>
                                 <Logo sx={{
-                                    display: {md: 'none'}
+                                    display: {lg: 'none'}
                                 }}/>
                             </Box>
 
                             <Box sx={{
-                                display: {xs: 'flex', md: 'none'},
+                                display: {xs: 'flex', lg: 'none'},
                                 alignItems: 'center',
                                 justifyContent: 'flex-end',
                                 flex: '1 1'
@@ -179,7 +179,7 @@ class Navbar extends React.Component {
                                         horizontal: 'left',
                                     }}
                                     sx={{
-                                        display: { xs: 'block', md: 'none' },
+                                        display: { xs: 'block', lg: 'none' },
                                     }}
                                     open={Boolean(this.state.menuAnchorEl)}
                                     onClose={() => this.handleMenuClose()}
