@@ -3,25 +3,15 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 
 function ChiSiamo(props) {
-    const chi_siamo = "UltraServizi è una ditta specializzata nei seguenti settori:\n" +
-        "              traslochi, sgomberi, imbiancatura, piccoli lavori edili e servizi di autotrasporti.\n" +
-        "              Offriamo anche servizi di custodia dei vostri beni e di noleggio piattaforme aeree.\n" +
-        "              Operiamo nelle province di Como, Lecco, Varese, Milano, Monza e Brianza.\n" +
-        "              Un team specializzato si prendera cura dei vostri ambienti e dei vostri beni per tutta " +
-        "              la durata del servizio.\n" +
-        "              Il nostro obiettivo è fornirvi un lavoro rapido e professionale garantendovi un risultato finale " +
-        "              soddisfacente.";
     return (
         <Grid
             container
-            marginBottom={1}
-            marginTop={1}
             sx={{
                 border: 3,
                 borderColor: 'secondary.main',
                 justifyContent: 'center',
-                mt: 2,
-                mb: 2,
+                mt: 10,
+                mb: 10,
                 maxWidth: {xs: "80%", lg: "md"},
             }}
             {...props}
@@ -59,6 +49,8 @@ function ChiSiamo(props) {
                     bgcolor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
+                    pt: 3,
+                    pb: 3,
                 }}
             >
                 <Typography
@@ -74,7 +66,14 @@ function ChiSiamo(props) {
                             whiteSpace: 'pre-line',
                         }}
                 >
-                    {chi_siamo}
+                    UltraServizi è una ditta specializzata nei seguenti settori: <b>traslochi</b>, <b>sgomberi</b>,
+                    <b> imbiancatura</b>, <b>piccoli lavori edili</b> e <b>servizi di autotrasporti</b>.
+                    Offriamo anche servizi di <b>custodia dei vostri beni</b> e di <b>noleggio piattaforme aeree</b>.<br/>
+                    Un team specializzato si prenderà cura dei vostri ambienti e dei vostri beni per tutta
+                    la durata del servizio.
+                    Il nostro obiettivo è fornirvi un lavoro rapido e professionale garantendovi un risultato finale
+                    soddisfacente.<br/>
+                    Operiamo nelle province di Como, Lecco, Varese, Milano, Monza e Brianza.
                 </Typography>
             </Grid>
             <Grid
