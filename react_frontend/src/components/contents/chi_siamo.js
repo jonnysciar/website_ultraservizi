@@ -10,8 +10,8 @@ function ChiSiamo(props) {
                 border: 3,
                 borderColor: 'secondary.main',
                 justifyContent: 'center',
-                mt: 10,
-                mb: 10,
+                mt: 5,
+                mb: 5,
                 maxWidth: {xs: "80%", lg: "md"},
             }}
             {...props}
@@ -71,7 +71,7 @@ function ChiSiamo(props) {
                     Offriamo anche servizi di <b>custodia dei vostri beni</b> e di <b>noleggio piattaforme aeree</b>.<br/>
                     Un team specializzato si prenderà cura dei vostri ambienti e dei vostri beni per tutta
                     la durata del servizio.
-                    Il nostro obiettivo è fornirvi un lavoro rapido e professionale garantendovi un risultato finale
+                    Il nostro obiettivo è fornirvi un <b>lavoro rapido</b> e <b>professionale</b> garantendovi un risultato finale
                     soddisfacente.<br/>
                     Operiamo nelle province di Como, Lecco, Varese, Milano, Monza e Brianza.
                 </Typography>

@@ -4,7 +4,7 @@ import Contatti from "../contents/contatti";
 import Servizi from "../contents/servizi";
 import ChiSiamo from "../contents/chi_siamo";
 import Home from  "../contents/home"
-import Carosello from "../contents/carosello";
+import ServiziCards from "../contents/serviziCards";
 
 function PageContent(props) {
     return (
@@ -12,9 +12,9 @@ function PageContent(props) {
             {...props}
         >
             <Home id='home' />
-            <Carosello />
             <ChiSiamo id='chi' />
-            <Servizi id='servizi'/>
+            <ServiziCards id='servizi' />
+            <Servizi />
             <Contatti id='contatti' />
         </Container>
     );

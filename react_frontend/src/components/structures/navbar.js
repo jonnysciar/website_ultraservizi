@@ -23,7 +23,7 @@ function Logo(props) {
             }}
         >
             <a href={string}>
-                <img className="logo" src='/images/logo/logo_navbar.png' alt='Logo' width={'70px'}/>
+                <img className="logo" src='images/logo/logo_navbar.png' alt='Logo' width={'70px'}/>
             </a>
         </Box>
     );

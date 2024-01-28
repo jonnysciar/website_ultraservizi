@@ -1,4 +1,3 @@
-import img from "../../images/placeholder.png";
 import * as React from "react";
 import {Component} from "react";
 import Container from "@mui/material/Container";
@@ -7,55 +6,60 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import {CardActionArea, CardContent, CardMedia, styled} from "@mui/material";
-import {ServizioDialog} from "../structures/dialogs";
 import theme from "../theme";
 
 const services = [
     {
         title: 'Traslochi',
-        image: img,
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
-            'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
-            'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    },
-    {
-        title: 'Trasporti',
-        image: img,
+        image: "images/services/traslochi.jpg",
+        id: "traslochi",
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
             'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
             'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     },
     {
         title: 'Sgomberi',
-        image: img,
+        image: "images/services/sgomberi.jpg",
+        id: "sgomberi",
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
             'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
             'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     },
     {
-        title: 'Servizio scala',
-        image: img,
+        title: 'Deposito',
+        image: "images/services/deposito.jpg",
+        id: "deposito",
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
             'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
             'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     },
     {
-        title: 'Servizio deposito',
-        image: img,
+        title: 'Piattaforma Aerea',
+        image: "images/services/piattaforma.jpg",
+        id: "piattaforma",
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
             'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
             'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     },
     {
-        title: 'Piccoli lavori domestici',
-        image: img,
+        title: 'Imbiancatura',
+        image: "images/services/imbiancatura.jpg",
+        id: "imbiancatura",
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
+            'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
+            'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    },
+    {
+        title: 'Piccoli Lavori Edili',
+        image: "images/services/edile.jpg",
+        id: "edile",
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
             'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
             'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     },
 ];
 
-class Servizi extends Component {
+class ServiziCards extends Component {
 
     constructor(props) {
         super(props);
@@ -64,24 +68,26 @@ class Servizi extends Component {
     }
 
     handleOpenCard(service) {
-        this.service = service;
-        this.setState({open: true});
-    }
-
-    handleCloseCard() {
-        this.setState({open: false});
+        const offset = document.getElementById('navbar').offsetHeight + 10;
+        const element = document.getElementById(service);
+        const y = element.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({top: y, behavior: 'smooth'});
     }
 
     render() {
         return (
             <Container
                 {...this.props}
+                sx={{
+                    mt: 5,
+                    mb: 5,
+                }}
             >
                 {/* Hero unit */}
                 <Container
                     disableGutters
                     sx={{
-                        pb: 6,
+                        mb: 5,
                     }}
                 >
                     <Typography
@@ -92,11 +98,6 @@ class Servizi extends Component {
                         gutterBottom
                     >
                         Ecco i nostri servizi
-                    </Typography>
-                    <Typography variant="h5" align="center" color="text.secondary" component="p">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book.
                     </Typography>
                 </Container>
                 {/* End hero unit */}
@@ -118,7 +119,7 @@ class Servizi extends Component {
                             >
                                 <Card>
                                     <StyledCardActionArea
-                                        onClick={() => this.handleOpenCard(service)}
+                                        onClick={() => this.handleOpenCard(service.id)}
                                     >
                                         <CardHeader
                                             title={service.title}
@@ -141,7 +142,6 @@ class Servizi extends Component {
                         ))}
                     </Grid>
                 </Container>
-                <ServizioDialog open={this.state.open} onClose={() => this.handleCloseCard()} service={this.service}/>
             </Container>
         );
     }
@@ -153,4 +153,4 @@ const StyledCardActionArea = styled(CardActionArea)`
   }
 `;
 
-export default Servizi;
+export default ServiziCards;

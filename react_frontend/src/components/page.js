@@ -24,9 +24,8 @@ function Page(props) {
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'flex-start',
+                    justifyContent: 'space-between',
                     alignItems: 'center',
-                    alignContent: 'center',
                 }}
             />
             <Footer/>
