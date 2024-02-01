@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>it.jonnysciar</groupId>
-	<artifactId>website_ultraservizi</artifactId>
+	<artifactId>website_ultra_servizi</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 
 	<properties>

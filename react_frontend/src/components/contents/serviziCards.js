@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import {CardActionArea, CardContent, CardMedia, styled} from "@mui/material";
-import theme from "../theme";
+import * as secondary from "@mui/material/styles/createPalette";
 
 const services = [
     {
@@ -97,7 +97,7 @@ class ServiziCards extends Component {
                         color="text.primary"
                         gutterBottom
                     >
-                        Ecco i nostri servizi
+                        I nostri servizi
                     </Typography>
                 </Container>
                 {/* End hero unit */}
@@ -149,7 +149,7 @@ class ServiziCards extends Component {
 
 const StyledCardActionArea = styled(CardActionArea)`
   && .MuiTouchRipple-child {
-    background-color: ${theme.palette.secondary.dark};
+    background-color: ${secondary.dark};
   }
 `;
 

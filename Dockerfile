@@ -8,4 +8,4 @@ COPY . .
 
 RUN ./mvnw clean package
 
-ENTRYPOINT ["java","-jar","/usr/src/app/target/website_ultraservizi-1.0.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/usr/src/app/target/website_ultra_servizi-1.0.0-SNAPSHOT.jar"]

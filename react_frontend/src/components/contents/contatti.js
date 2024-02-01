@@ -7,7 +7,7 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import * as React from "react";
 import {styled} from "@mui/material";
 import Button from "@mui/material/Button";
-import theme from "../theme";
+import * as secondary from "@mui/material/styles/createPalette";
 
 function Contatti(props) {
     return (
@@ -150,7 +150,7 @@ function Contatti(props) {
 
 const StyledButton = styled(Button)`
   && .MuiTouchRipple-child {
-    background-color: ${theme.palette.secondary.dark};
+    background-color: ${secondary.dark};
   }
 `;
 

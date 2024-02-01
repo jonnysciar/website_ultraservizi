@@ -1,4 +1,4 @@
-package it.jonnysciar.website_ultraservizi.controllers;
+package it.jonnysciar.website_ultra_servizi.controllers;
 
 import org.springframework.web.bind.annotation.*;
 
