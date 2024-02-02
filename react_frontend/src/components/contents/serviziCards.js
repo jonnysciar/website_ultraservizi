@@ -7,57 +7,7 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import {CardActionArea, CardContent, CardMedia, styled} from "@mui/material";
 import * as secondary from "@mui/material/styles/createPalette";
-
-const services = [
-    {
-        title: 'Traslochi',
-        image: "images/services/traslochi.jpg",
-        id: "traslochi",
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
-            'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
-            'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    },
-    {
-        title: 'Sgomberi',
-        image: "images/services/sgomberi.jpg",
-        id: "sgomberi",
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
-            'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
-            'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    },
-    {
-        title: 'Deposito',
-        image: "images/services/deposito.jpg",
-        id: "deposito",
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
-            'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
-            'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    },
-    {
-        title: 'Piattaforma Aerea',
-        image: "images/services/piattaforma.jpg",
-        id: "piattaforma",
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
-            'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
-            'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    },
-    {
-        title: 'Imbiancatura',
-        image: "images/services/imbiancatura.jpg",
-        id: "imbiancatura",
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
-            'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
-            'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    },
-    {
-        title: 'Piccoli Lavori Edili',
-        image: "images/services/edile.jpg",
-        id: "edile",
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n' +
-            'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, \n' +
-            'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    },
-];
+import {services} from "../structures/services";
 
 class ServiziCards extends Component {
 
@@ -79,8 +29,8 @@ class ServiziCards extends Component {
             <Container
                 {...this.props}
                 sx={{
-                    mt: 5,
-                    mb: 5,
+                    mt: 10,
+                    mb: 10,
                 }}
             >
                 {/* Hero unit */}
@@ -133,7 +83,7 @@ class ServiziCards extends Component {
                                             }}
                                         />
                                         <CardContent>
-                                            <CardMedia component='img' image={service.image}
+                                            <CardMedia component='img' image={service.img}
                                                        sx={{bgcolor: 'primary.light'}}/>
                                         </CardContent>
                                     </StyledCardActionArea>

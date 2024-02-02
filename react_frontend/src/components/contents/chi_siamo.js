@@ -10,8 +10,8 @@ function ChiSiamo(props) {
                 border: 3,
                 borderColor: 'secondary.main',
                 justifyContent: 'center',
-                mt: 5,
-                mb: 5,
+                mt: 10,
+                mb: 10,
                 maxWidth: {xs: "80%", lg: "md"},
             }}
             {...props}
@@ -68,7 +68,8 @@ function ChiSiamo(props) {
                 >
                     Ultra Servizi è una ditta specializzata nei seguenti settori: <b>traslochi</b>, <b>sgomberi</b>,
                     <b> imbiancatura</b>, <b>piccoli lavori edili</b> e <b>servizi di autotrasporti</b>.
-                    Offriamo anche servizi di <b>custodia dei vostri beni</b> e di <b>noleggio piattaforme aeree</b>.<br/>
+                    Offriamo anche servizi di <b>deposito</b>, <b>custodia dei vostri beni</b> e
+                    <b> noleggio piattaforme aeree</b>.<br/>
                     Un team specializzato si prenderà cura dei vostri ambienti e dei vostri beni per tutta
                     la durata del servizio.
                     Il nostro obiettivo è fornirvi un <b>lavoro rapido</b> e <b>professionale</b> garantendovi un risultato finale

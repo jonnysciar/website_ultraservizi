@@ -130,7 +130,7 @@ function Home(props) {
                 height: {xs: "70vh", lg: "100vh"},
                 backgroundImage: "radial-gradient(#2c2c2d 2px, transparent 0)",
                 backgroundSize: "120px 120px",
-                mb: 5
+                mb: 10
             }}
             {...props}
         >

@@ -1,154 +1,188 @@
 import Grid from "@mui/material/Grid";
 import * as React from "react";
+import Typography from "@mui/material/Typography";
+import {services} from "../structures/services";
+import {useMediaQuery, useTheme} from "@mui/material";
+import Box from "@mui/material/Box";
 
-function Servizi(props) {
+function TextItem(props) {
+    let service = props.service;
     return (
         <Grid
             container
-            disableGutters
+            item
+            xs={12}
+            md={6}
             sx={{
-                minHeight: {lg: "100vh", xs: "70vh"},
+                padding: "2%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "flex-start",
+                alignContent: "space-around",
+            }}
+        >
+            <Typography
+                variant="h4"
+                align="left"
+                component="p"
+                gutterBottom={true}
+                color="primary.main"
+                sx={{
+                    fontWeight: 'bold',
+                }}
+            >
+                {service.title}
+            </Typography>
+            <Typography
+                variant="h6"
+                align="left"
+                component="p"
+                paragraph={true}
+                color="primary.main"
+            >
+                {service.desc}
+            </Typography>
+        </Grid>
+    );
+}
+
+function ImgItem(props) {
+    let service = props.service;
+    if ('right' in props) {
+        return (
+            <Grid
+                item
+                xs={6}
+                sx={{
+                    height: {lg: "50vh", xs: "35vh"},
+                }}
+            >
+                <Box
+                    component="img"
+                    src={service.img}
+                    alt={service.title}
+                    id={service.id}
+                    sx={{
+                        objectFit: "cover",
+                        borderBottomRightRadius: {lg: "200px", xs: "100px"},
+                        boxShadow: 10,
+                        width: "100%",
+                        height: "100%",
+                    }}
+                >
+                </Box>
+            </Grid>
+        );
+    } else if ('left' in props) {
+        return (
+            <Grid
+                item
+                xs={6}
+                sx={{
+                    height: {lg: "50vh", xs: "35vh"},
+                }}
+            >
+                <Box
+                    component="img"
+                    src={service.img}
+                    alt={service.title}
+                    id={service.id}
+                    sx={{
+                        objectFit: "cover",
+                        borderTopLeftRadius: {lg: "200px", xs: "100px"},
+                        boxShadow: 10,
+                        width: "100%",
+                        height: "100%",
+                    }}
+                >
+                </Box>
+            </Grid>
+        );
+    }
+
+    return (
+        <Grid
+            item
+            xs={12}
+            sx={{
+                height: {lg: "50vh", xs: "35vh"},
+            }}
+        >
+            <Box
+                component="img"
+                src={service.img}
+                alt={service.title}
+                id={service.id}
+                sx={{
+                    objectFit: "cover",
+                    boxShadow: 10,
+                    width: "100%",
+                    height: "100%",
+                }}
+            >
+            </Box>
+        </Grid>
+    );
+}
+
+function Servizi(props) {
+    const theme = useTheme();
+    const smallerThanMd = useMediaQuery(theme.breakpoints.down("md"));
+
+    return (
+        <Box
+            sx={{
                 borderTop: 4,
                 borderTopColor: "secondary.main",
                 borderBottom: 4,
                 borderBottomColor: "secondary.main",
-                mt: 5,
-                mb: 5,
+                mt: 10,
+                mb: 10,
             }}
-            {...props}
         >
-            {/* Traslochi */}
             <Grid
-                item
-                component="img"
-                src="images/services/traslochi.jpg"
-                alt="traslochi"
-                id="traslochi"
-                xs={6}
+                container
+                rowSpacing={smallerThanMd * 8}
                 sx={{
-                    objectFit: "cover",
-                    height: {lg: "50vh", xs: "35vh"},
-                    borderBottomRightRadius: {lg: "200px", xs: "100px"},
-                    boxShadow: 10,
+                    minHeight: {lg: "100vh", xs: "70vh"},
                 }}
+                {...props}
             >
+                {services.map((service, idx) => {
+                    let pair = idx % 2 === 0
+                    if (smallerThanMd) {
+                        return (<Grid
+                            container
+                            item
+                            key={service.id}
+                        >
+                            <ImgItem service={service}/>
+                            <TextItem service={service}/>
+                        </Grid>)
+                    }
+                    if (pair) {
+                        return (<Grid
+                            container
+                            item
+                            key={service.id}
+                        >
+                            <ImgItem service={service} right={true}/>
+                            <TextItem service={service}/>
+                        </Grid>)
+                    } else {
+                        return (<Grid
+                            container
+                            item
+                            key={service.id}
+                        >
+                            <TextItem service={service}/>
+                            <ImgItem service={service} left={true}/>
+                        </Grid>)
+                    }
+                })}
             </Grid>
-            <Grid
-                item
-                xs={6}
-            >
-            </Grid>
-
-            {/* Sgomberi */}
-            <Grid
-                item
-                xs={6}
-            >
-            </Grid>
-            <Grid
-                item
-                component="img"
-                src="images/services/sgomberi.jpg"
-                alt="sgomberi"
-                id="sgomberi"
-                xs={6}
-                sx={{
-                    objectFit: "cover",
-                    height: {lg: "50vh", xs: "35vh"},
-                    borderTopLeftRadius: {lg: "200px", xs: "100px"},
-                    boxShadow: 10,
-                }}
-            >
-            </Grid>
-
-            {/* Deposito */}
-            <Grid
-                item
-                component="img"
-                src="images/services/deposito.jpg"
-                alt="deposito"
-                id="deposito"
-                xs={6}
-                sx={{
-                    objectFit: "cover",
-                    height: {lg: "50vh", xs: "35vh"},
-                    borderBottomRightRadius: {lg: "200px", xs: "100px"},
-                    boxShadow: 10,
-                }}
-            >
-            </Grid>
-            <Grid
-                item
-                xs={6}
-            >
-            </Grid>
-
-            {/* Piattaforma */}
-            <Grid
-                item
-                xs={6}
-            >
-            </Grid>
-            <Grid
-                item
-                component="img"
-                src="images/services/piattaforma.jpg"
-                alt="piattaforma"
-                id="piattaforma"
-                xs={6}
-                sx={{
-                    objectFit: "cover",
-                    height: {lg: "50vh", xs: "35vh"},
-                    borderTopLeftRadius: {lg: "200px", xs: "100px"},
-                    boxShadow: 10,
-                }}
-            >
-            </Grid>
-
-            {/* Imbiancatura */}
-            <Grid
-                item
-                component="img"
-                src="images/services/imbiancatura.jpg"
-                alt="imbiancatura"
-                id="imbiancatura"
-                xs={6}
-                sx={{
-                    objectFit: "cover",
-                    height: {lg: "50vh", xs: "35vh"},
-                    borderBottomRightRadius: {lg: "200px", xs: "100px"},
-                    boxShadow: 10,
-                }}
-            >
-            </Grid>
-            <Grid
-                item
-                xs={6}
-            >
-            </Grid>
-
-            {/* Edile */}
-            <Grid
-                item
-                xs={6}
-            >
-            </Grid>
-            <Grid
-                item
-                component="img"
-                src="images/services/edile.jpg"
-                alt="edile"
-                id="edile"
-                xs={6}
-                sx={{
-                    objectFit: "cover",
-                    height: {lg: "50vh", xs: "35vh"},
-                    borderTopLeftRadius: {lg: "200px", xs: "100px"},
-                    boxShadow: 10,
-                }}
-            >
-            </Grid>
-        </Grid>
+        </Box>
     );
 }
 

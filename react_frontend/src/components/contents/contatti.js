@@ -18,8 +18,8 @@ function Contatti(props) {
             sx={{
                 bgcolor: 'primary.main',
                 borderRadius: 10,
-                mt: 5,
-                mb: 5,
+                mt: 10,
+                mb: 10,
                 pt: 4,
                 pb: 4,
                 maxWidth: {xs: "80%", lg: "lg"},
