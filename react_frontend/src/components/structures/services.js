@@ -63,9 +63,9 @@ export const services = [
         img: "images/services/edile.jpg",
         img_sm: "images/services/edile_small.jpg",
         img_md: "images/services/edile_medium.jpg",
-        desc:   "Provvederemo a fornirvi un servizio di traslochi speciﬁco in\n" +
-            "base alle vostre esigenze.\n" +
-            "Ci occuperemo dello smontaggio e rimontaggio del\n" +
-            "vostro mobilio e dell’impacchettamento di piccoli oggetti."
+        desc:   "Offriamo piccoli interventi di ristrutturazione e manutenzione\n" +
+            "edilizia, come ad esempio la realizzazione di\n" +
+            "piccole opere murarie, cartongessi, risanamento muri,\n" +
+            "pavimentazioni, laminati e smaltimento inerti."
     },
 ]
