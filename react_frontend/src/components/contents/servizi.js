@@ -60,7 +60,7 @@ function ImgItem(props) {
             >
                 <Box
                     component="img"
-                    src={service.img}
+                    src={service.img_md}
                     alt={service.title}
                     id={service.id}
                     sx={{
@@ -85,7 +85,7 @@ function ImgItem(props) {
             >
                 <Box
                     component="img"
-                    src={service.img}
+                    src={service.img_md}
                     alt={service.title}
                     id={service.id}
                     sx={{
@@ -111,7 +111,7 @@ function ImgItem(props) {
         >
             <Box
                 component="img"
-                src={service.img}
+                src={service.img_md}
                 alt={service.title}
                 id={service.id}
                 sx={{
