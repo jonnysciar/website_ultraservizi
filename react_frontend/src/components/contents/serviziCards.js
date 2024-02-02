@@ -85,7 +85,7 @@ class ServiziCards extends Component {
                                         <CardContent>
                                             <CardMedia
                                                 component='img'
-                                                image={service.img_md}
+                                                image={service.img_sm}
                                                 alt={service.title}
                                                 sx={{bgcolor: 'primary.light'}}
                                             />
