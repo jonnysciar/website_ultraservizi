@@ -4,6 +4,11 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
 function HomeText(props) {
+    let sx_xs = JSON.parse(JSON.stringify(props.sx));
+    let sx_md = JSON.parse(JSON.stringify(props.sx));
+    sx_xs.display = {xs: "inline", sm: "none"};
+    sx_md.display = {xs: "none", sm: "inline"};
+
     return (
         <Grid
             container
@@ -18,9 +23,19 @@ function HomeText(props) {
             >
                 U
             </Typography>
+            {/* Desktop */}
             <Typography
                 {...props}
                 color="white"
+                sx={sx_md}
+            >
+                ltra
+            </Typography>
+            {/* Mobile */}
+            <Typography
+                {...props}
+                color="white"
+                sx={sx_xs}
             >
                 ltra&nbsp;<br/>
             </Typography>
@@ -127,7 +142,7 @@ function Home(props) {
         <Grid
             container
             sx={{
-                height: {xs: "70vh", lg: "100vh"},
+                height: "100vh",
                 backgroundImage: "radial-gradient(#2c2c2d 2px, transparent 0)",
                 backgroundSize: "120px 120px",
                 mb: 10
@@ -139,7 +154,7 @@ function Home(props) {
                 item
                 xs={6}
                 sx={{
-                    height: {xs: "35vh", lg: "50vh"},
+                    height: "50vh",
                     borderBottomRightRadius: {xs: "100px", lg: "200px"},
                     backgroundImage: "radial-gradient(farthest-corner at 0px 0px, #ab1f24, #e61e25)",
                 }}
@@ -188,7 +203,7 @@ function Home(props) {
                 item
                 xs={6}
                 sx={{
-                    height: {lg: "50vh", xs: "35vh"},
+                    height: "50vh",
                 }}
             >
             </Grid>
@@ -197,7 +212,7 @@ function Home(props) {
                 item
                 xs={6}
                 sx={{
-                    height: {lg: "50vh", xs: "35vh"},
+                    height: "50vh",
                 }}
             >
             </Grid>
@@ -205,7 +220,7 @@ function Home(props) {
                 item
                 xs={6}
                 sx={{
-                    height: {lg: "50vh", xs: "35vh"},
+                    height: "50vh",
                     borderTopLeftRadius: {lg: "200px", xs: "100px"},
                     backgroundImage: "radial-gradient(farthest-corner at 0px 0px, #e61e25, #ab1f24)"
                 }}

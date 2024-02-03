@@ -57,14 +57,12 @@ function ChiSiamo(props) {
                     variant="h6"
                     component="p"
                     paragraph={true}
-                    sx=
-                        {{
-                            fontWeight: 'regular',
-                            lineHeight: 2,
-                            color: 'primary.main',
-                            textAlign: 'center',
-                            whiteSpace: 'pre-line',
-                        }}
+                    sx={{
+                        fontWeight: 'regular',
+                        lineHeight: {xs: 1, sm: 2},
+                        color: 'primary.main',
+                        textAlign: 'justify',
+                    }}
                 >
                     UltraServizi è una ditta specializzata nei seguenti settori: <b>traslochi</b>, <b>sgomberi</b>,
                     <b> imbiancatura</b>, <b>piccoli lavori edili</b> e <b>servizi di autotrasporti</b>.
