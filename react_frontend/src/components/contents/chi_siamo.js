@@ -66,7 +66,7 @@ function ChiSiamo(props) {
                             whiteSpace: 'pre-line',
                         }}
                 >
-                    Ultra Servizi è una ditta specializzata nei seguenti settori: <b>traslochi</b>, <b>sgomberi</b>,
+                    UltraServizi è una ditta specializzata nei seguenti settori: <b>traslochi</b>, <b>sgomberi</b>,
                     <b> imbiancatura</b>, <b>piccoli lavori edili</b> e <b>servizi di autotrasporti</b>.
                     Offriamo anche servizi di <b>deposito</b>, <b>custodia dei vostri beni</b> e
                     <b> noleggio piattaforme aeree</b>.<br/>

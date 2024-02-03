@@ -11,7 +11,7 @@ function Copyright(props) {
             align='center'
             {...props}
         >
-            {'Copyright ©  ' + new Date().getFullYear() + ' Ultra Servizi.'}
+            {'Copyright ©  ' + new Date().getFullYear() + ' UltraServizi.'}
         </Typography>
     );
 }
