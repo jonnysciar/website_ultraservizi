@@ -59,7 +59,7 @@ function ChiSiamo(props) {
                     paragraph={true}
                     sx={{
                         fontWeight: 'regular',
-                        lineHeight: {xs: 1, sm: 2},
+                        lineHeight: {xs: 1.5, sm: 2},
                         color: 'primary.main',
                         textAlign: 'justify',
                     }}
