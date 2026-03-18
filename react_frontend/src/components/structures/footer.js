@@ -11,7 +11,7 @@ function Copyright(props) {
             align='center'
             {...props}
         >
-            {'Copyright ©  ' + new Date().getFullYear() + ' UltraServizi.'}
+            {'Copyright ©  ' + new Date().getFullYear() + ' Ultra Servizi di Salvatorico Sciarrabba - P.IVA 0123456789'}
         </Typography>
     );
 }
